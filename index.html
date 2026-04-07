@@ -24,6 +24,23 @@ h1{text-align:center;font-weight:700;font-size:1.4rem;letter-spacing:.08em;margi
 .btn:hover{background:#02b050}
 .badge{display:inline-block;background:#e04675;color:#fff;font-size:.7rem;padding:3px 8px;border-radius:4px;margin-bottom:8px}
 </style>
+<script>
+document.addEventListener('click',function(e){
+var a=e.target.closest('a');
+if(!a||!a.href)return;
+var url=a.href;
+var ua=navigator.userAgent||'';
+if(/Instagram|FBAN|FBAV/i.test(ua)){
+e.preventDefault();
+if(/android/i.test(ua)){
+var w=window.open(url,'_blank');
+if(!w){window.location.href=url;}
+}else{
+window.open(url,'_blank');
+}
+}
+});
+</script>
 </head>
 <body>
 <h1>EVB 유리알광 틴트립<br>사전주문 이벤트</h1>
